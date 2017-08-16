@@ -14,9 +14,15 @@
     },
     "require": {
         "php": ">=7.1",
+<<<<<<< HEAD
         "psr/simple-cache": "*",
         "vainyl/core": "dev-master",
         "vainyl/connection": "dev-master"
+=======
+        "psr/simple-cache": "^1",
+        "vainyl/core": "dev-master",
+        "vainyl/connection": "dev-master"
+>>>>>>> 0.1.x
     },
     "repositories": [
         {
