@@ -27,16 +27,16 @@ abstract class AbstractCacheException extends AbstractCoreException implements C
     /**
      * AbstractCacheException constructor.
      *
-     * @param CacheInterface $cache
-     * @param string            $message
-     * @param int               $code
-     * @param \Exception|null   $previous
+     * @param CacheInterface  $cache
+     * @param string          $message
+     * @param int             $code
+     * @param \Throwable|null $previous
      */
     public function __construct(
         CacheInterface $cache,
         string $message,
         int $code = 500,
-        \Exception $previous = null
+        \Throwable $previous = null
     ) {
         $this->cache = $cache;
         parent::__construct($message, $code, $previous);
@@ -45,16 +45,16 @@ abstract class AbstractCacheException extends AbstractCoreException implements C
     /**
      * @inheritDoc
      */
-    public function toArray(): array
+    public function getCache(): CacheInterface
     {
-        return array_merge(['cache' => $this->cache->getName()], parent::toArray());
+        return $this->cache;
     }
 
     /**
      * @inheritDoc
      */
-    public function getCache(): CacheInterface
+    public function toArray(): array
     {
-        return $this->cache;
+        return array_merge(['cache' => $this->cache->getName()], parent::toArray());
     }
 }
