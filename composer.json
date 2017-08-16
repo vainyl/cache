@@ -1,0 +1,32 @@
+{
+    "name": "vainyl/cache",
+    "type": "shared-package",
+    "authors": [
+        {
+            "name": "Taras Girnyk",
+            "email": "taras.p.gyrnik@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vainyl\\Cache\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "psr/simple-cache": "*",
+        "vainyl/core": "dev-master",
+        "vainyl/connection": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.vainyl.com:444"
+        }
+    ],
+    "suggest" : {
+        "vainyl/redis" : "Driver-agnostic redis classes"
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
