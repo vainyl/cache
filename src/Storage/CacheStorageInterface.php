@@ -35,5 +35,5 @@ interface CacheStorageInterface extends IdentifiableInterface
      *
      * @return CacheInterface
      */
-    public function getDatabase(string $alias): CacheInterface;
+    public function getCache(string $alias): CacheInterface;
 }

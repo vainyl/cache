@@ -35,7 +35,7 @@ class CacheStorage extends AbstractStorageDecorator implements CacheStorageInter
     /**
      * @inheritDoc
      */
-    public function getDatabase(string $alias): CacheInterface
+    public function getCache(string $alias): CacheInterface
     {
         return $this->offsetGet($alias);
     }
