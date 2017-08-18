@@ -24,8 +24,11 @@
             "url": "https://satis.vainyl.com:444"
         }
     ],
-    "suggest" : {
-        "vainyl/redis" : "Driver-agnostic redis classes"
+    "suggest": {
+        "vainyl/redis": "Driver-agnostic redis classes",
+        "vainyl/credis-bridge": "CRedis native extension adapter and simple cache implementation",
+        "vainyl/apcu-bridge": "APCu simple cache implementation",
+        "vainyl/memcached-bridge": "Memcached simple cache implementation"
     },
     "prefer-stable": true,
     "minimum-stability": "dev"
